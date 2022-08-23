@@ -16,6 +16,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import com.example.stock.domain.Stock;
 import com.example.stock.domain.StockRepository;
+import com.example.stock.service.pessimisticlock.PessimisticLockStockService;
 
 @SuppressWarnings("NonAsciiCharacters") // 한글 경고 무시
 @DisplayNameGeneration(DisplayNameGenerator.ReplaceUnderscores.class) // _부분 공백으로 처리

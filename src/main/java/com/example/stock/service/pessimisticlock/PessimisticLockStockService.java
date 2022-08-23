@@ -1,4 +1,4 @@
-package com.example.stock.service;
+package com.example.stock.service.pessimisticlock;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -7,17 +7,17 @@ import com.example.stock.domain.Stock;
 import com.example.stock.domain.StockRepository;
 
 @Service
-public class OptimisticLockStockService {
+public class PessimisticLockStockService {
 
     private final StockRepository stockRepository;
 
-    public OptimisticLockStockService(StockRepository stockRepository) {
+    public PessimisticLockStockService(StockRepository stockRepository) {
         this.stockRepository = stockRepository;
     }
 
     @Transactional
     public void decrease(Long id, Long quantity) {
-        Stock stock = stockRepository.findByIdWithOptimisticLock(id);
+        Stock stock = stockRepository.findByIdWithPessimisticLock(id);
 
         stock.decrease(quantity);
 

@@ -1,4 +1,4 @@
-package com.example.stock.service;
+package com.example.stock.service.optimisticlock;
 
 import org.springframework.stereotype.Component;
 
