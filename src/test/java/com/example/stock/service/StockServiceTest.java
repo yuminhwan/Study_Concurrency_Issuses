@@ -23,7 +23,7 @@ import com.example.stock.domain.StockRepository;
 class StockServiceTest {
 
     @Autowired
-    private StockService stockService;
+    private PessimisticLockStockService stockService;
 
     @Autowired
     private StockRepository stockRepository;
