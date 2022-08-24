@@ -1,4 +1,4 @@
-package com.example.stock.service.lettue;
+package com.example.stock.service.lettuce;
 
 import java.time.Duration;
 
