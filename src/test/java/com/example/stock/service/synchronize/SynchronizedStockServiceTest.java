@@ -1,4 +1,4 @@
-package com.example.stock.service;
+package com.example.stock.service.synchronize;
 
 import static org.assertj.core.api.Assertions.*;
 
@@ -13,11 +13,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import com.example.stock.domain.Stock;
 import com.example.stock.domain.StockRepository;
+import com.example.stock.service.LockTest;
 import com.example.stock.service.pessimisticlock.PessimisticLockStockService;
 
 @SuppressWarnings("NonAsciiCharacters") // 한글 경고 무시
 @LockTest
-class StockServiceTest {
+class SynchronizedStockServiceTest {
 
     @Autowired
     private PessimisticLockStockService stockService;

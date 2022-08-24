@@ -1,20 +1,20 @@
-package com.example.stock.service;
+package com.example.stock.service.synchronize;
 
 /*
 프록시 객체
  */
 public class TransactionStockService {
 
-    private final StockService stockService;
+    private final SynchronizedStockService synchronizedStockService;
 
-    public TransactionStockService(StockService stockService) {
-        this.stockService = stockService;
+    public TransactionStockService(SynchronizedStockService synchronizedStockService) {
+        this.synchronizedStockService = synchronizedStockService;
     }
 
     public void decrease(Long id, Long quantity) {
         startTransaction();
 
-        stockService.decrease(id, quantity);
+        synchronizedStockService.decrease(id, quantity);
 
         endTransaction();
     }
